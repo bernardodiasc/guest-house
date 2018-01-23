@@ -14,22 +14,26 @@ const config = {
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist"
+    contentBase: "./dist",
+    watchOptions: {
+      poll: true,
+      ignored: "/node_modules/"
+    }
   },
   module: {
     rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }]
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
-    new UglifyJsPlugin({
-      sourceMap: true,
-      uglifyOptions: {
-        ecma: 8,
-        compress: {
-          warnings: false
-        }
-      }
-    }),
+    // new CleanWebpackPlugin(["dist"]),
+    // new UglifyJsPlugin({
+    //   sourceMap: true,
+    //   uglifyOptions: {
+    //     ecma: 8,
+    //     compress: {
+    //       warnings: false
+    //     }
+    //   }
+    // }),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     })
