@@ -6,7 +6,7 @@ import bedrooms from "../constants/bedrooms";
 
 class Homepage extends Component {
   render() {
-    return <Bedrooms Link={Link} bedrooms={bedrooms} />;
+    return <Bedrooms bedrooms={bedrooms} />;
   }
 }
 

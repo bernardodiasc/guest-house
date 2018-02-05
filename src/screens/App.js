@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 import HeaderBar from "../displays/HeaderBar";
 
@@ -7,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <main>
-        <HeaderBar Link={Link} />
+        <HeaderBar />
         <article>{this.props.children}</article>
       </main>
     );

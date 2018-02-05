@@ -23,6 +23,9 @@ const config = {
   module: {
     rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }]
   },
+  resolve: {
+    modules: ["src", "node_modules"]
+  },
   plugins: [
     // new CleanWebpackPlugin(["dist"]),
     // new UglifyJsPlugin({

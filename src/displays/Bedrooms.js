@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Bedrooms = ({ Link, bedrooms }) => (
+const Bedrooms = ({ bedrooms }) => (
   <section>
     <h1>List of Bedrooms</h1>
 
